@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- for loop where we loop through the objects and pull up the titles
+and posts.  Each title is also a link to the individual post page for that 
+post, which is called by putting its id in a query string as part of the url,
+so something like: -->
+
+
+{% for blog in blogs %}
+<a href = '/blog?id={{blog.id}}')> <h2>{{blog.title}} </h2></a>
+<p>{{blog.body}}</p>
+<br/>
+{% endfor %}
+
+{% endblock %}
