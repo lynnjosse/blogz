@@ -3,13 +3,6 @@
 {% block content %}
 
 <form method="POST" action = '/add'>
-    {% with messages = get_flashed_messages() %}
-        <ul>
-            {%for message in messages %}
-                <li>{{message}}</li>
-            {% endfor %}
-        </ul>
-    {% endwith %}  
 
     <label for "title">title:</label>
     <br>
